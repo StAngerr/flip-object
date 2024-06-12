@@ -1,0 +1,47 @@
+{
+  "name": "flip",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "type": "module",
+  "description": "Small library to slip object's or map's properties",
+  "scripts": {
+    "build": "babel src -d dist",
+    "lint": "eslint ./src/**/*.js",
+    "test": "mocha tests/**/*.test.js",
+    "coverage": "c8 npm test"
+  },
+  "keywords": [
+    "object",
+    "invert",
+    "invert-properties",
+    "flip",
+    "flip-object",
+    "flip-merge",
+    "invert-merge",
+    "object-flip",
+    "object-invert",
+    "prop-flip",
+    "prop-invert",
+    "invert-merge",
+    "obj-flip-merge",
+    "flip-utilities",
+    "invert-utils",
+    "flip-obj-utils"
+  ],
+  "author": "sto",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@eslint/js": "^9.4.0",
+    "@types/chai": "^4.3.16",
+    "c8": "^10.1.1",
+    "chai": "^5.1.1",
+    "globals": "^15.4.0",
+    "mocha": "^10.4.0",
+    "nyc": "^17.0.0",
+    "prettier": "3.3.1"
+  }
+}
