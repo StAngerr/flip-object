@@ -11,6 +11,7 @@
     "test": "mocha tests/**/*.test.js",
     "coverage": "c8 npm test"
   },
+  "typings": "./src/*.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/StAngerr/flip-object.git"
