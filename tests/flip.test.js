@@ -46,5 +46,6 @@ describe('flip function tests', () => {
     const result = flip(obj);
 
     expect(result).to.be.an.instanceof(Map);
+    expect(result.size).to.be.equal(4);
   });
 });

@@ -57,6 +57,7 @@ describe('flipMerge function tests', () => {
     const result = flipMerge(obj);
 
     expect(result).to.be.an.instanceof(Map);
+    expect(result.size).to.be.equal(8);
     expect(result.get('John')).to.equal('name');
     expect(result.get(false)).to.equal('active');
     expect(result.get(obj.age)).to.equal('age');
