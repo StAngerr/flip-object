@@ -1,6 +1,6 @@
 {
   "name": "flip-object",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/index.ts",
   "module": "dist/index.ts",
   "type": "module",

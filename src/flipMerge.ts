@@ -22,3 +22,5 @@ export const flipMerge = (
 
   return flipped;
 };
+
+export default flipMerge;

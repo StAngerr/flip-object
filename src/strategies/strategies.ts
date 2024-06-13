@@ -119,3 +119,9 @@ export const defaultStrategy = (): Function => {
     return obj;
   };
 };
+
+export default {
+  mergeValues,
+  increment,
+  ignoreRepeatable,
+};

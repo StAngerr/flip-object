@@ -26,3 +26,5 @@ export const flip = <T extends string | number | symbol>(
 
   return flipped;
 };
+
+export default flip;

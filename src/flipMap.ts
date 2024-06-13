@@ -19,3 +19,5 @@ export const flipMap = <T, U>(
 
   return flipped;
 };
+
+export default flipMap;

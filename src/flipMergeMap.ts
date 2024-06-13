@@ -19,3 +19,5 @@ export const flipMergeMap = <T, V>(
 
   return flipped;
 };
+
+export default flipMergeMap;
