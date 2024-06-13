@@ -1,5 +1,5 @@
 {
-  "name": "flip",
+  "name": "flip-object",
   "version": "1.0.0",
   "main": "dist/index.js",
   "module": "src/index.js",
@@ -10,6 +10,10 @@
     "lint": "eslint ./src/**/*.js",
     "test": "mocha tests/**/*.test.js",
     "coverage": "c8 npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StAngerr/flip-object.git"
   },
   "keywords": [
     "object",
