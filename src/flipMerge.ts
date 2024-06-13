@@ -1,4 +1,4 @@
-import { flipMergeAsMap, hasNonPrimitiveValues, isNil } from './utils/utils.js';
+import { flipMergeAsMap, hasNonPrimitiveValues, isNil } from './utils/utils';
 
 /**
  * Flips the keys and values of an object, merging the result with the original object.
@@ -6,7 +6,9 @@ import { flipMergeAsMap, hasNonPrimitiveValues, isNil } from './utils/utils.js';
  * @param {Object} original - The object to flip.
  * @returns {Object} The flipped and merged object.
  */
-export const flipMerge = (original) => {
+export const flipMerge = (
+  original: Record<string, any>,
+): object | typeof original => {
   const flipped = Object.assign({}, original);
 
   if (isNil(original)) return original;

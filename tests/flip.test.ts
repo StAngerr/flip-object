@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { flip } from '../src/flip.js';
+import { flip } from '../src/flip';
 
 describe('flip function tests', () => {
   it('should return null if argument null', () => {

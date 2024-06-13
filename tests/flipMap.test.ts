@@ -1,4 +1,4 @@
-import { flipMap } from '../src/flipMap.js';
+import { flipMap } from '../src/flipMap.ts';
 import { expect } from 'chai';
 
 describe('flipMap', () => {

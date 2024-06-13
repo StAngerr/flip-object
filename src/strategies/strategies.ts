@@ -5,7 +5,7 @@
  * @returns {Function} A function that accepts an object, a future key, and a future value,
  * and returns the updated object with the key-value pair.
  */
-export const increment = () => {
+export const increment = (): Function => {
   let lastIndex = 0;
 
   /**
@@ -17,7 +17,11 @@ export const increment = () => {
    * @param {*} futureValue - The value to set for the futureKey.
    * @returns {Object} The updated object with the key-value pair.
    */
-  return function (obj, futureKey, futureValue) {
+  return function (
+    obj: { [x: string]: any },
+    futureKey: string | number,
+    futureValue: any,
+  ): object {
     if (obj[futureKey]) {
       obj[`${futureKey}_${lastIndex}`] = futureValue;
       lastIndex++;
@@ -33,7 +37,7 @@ export const increment = () => {
  *
  * @returns {Function} A function that accepts an object, a future key, and a future value,
  * and merges the value into an array if the key already exists, otherwise sets the value as is.
- */ export const mergeValues = () => {
+ */ export const mergeValues = (): Function => {
   /**
    * Function that merges values into an array for repeatable keys.
    *
@@ -42,7 +46,11 @@ export const increment = () => {
    * @param {*} futureValue - The value to merge or set for the futureKey.
    * @returns {Object} The updated object with the merged or set key-value pair.
    */
-  return function (obj, futureKey, futureValue) {
+  return function (
+    obj: { [x: string]: any },
+    futureKey: string | number,
+    futureValue: any,
+  ): object {
     if (obj[futureKey]) {
       if (Array.isArray(obj[futureKey])) {
         obj[futureKey].push(futureValue);
@@ -62,7 +70,7 @@ export const increment = () => {
  * @returns {Function} A function that accepts an object, a future key, and a future value,
  * and skips flipping the key if it already exists or has been encountered before.
  */
-export const ignoreRepeatable = () => {
+export const ignoreRepeatable = (): Function => {
   const repeatableKeys = new Set();
   /**
    * Function that skips flipping repeatable properties.
@@ -72,7 +80,11 @@ export const ignoreRepeatable = () => {
    * @param {*} futureValue - The value to set for the futureKey.
    * @returns {Object} The updated object with the key-value pair, or the same object if the key is skipped.
    */
-  return function (obj, futureKey, futureValue) {
+  return function (
+    obj: { [x: string]: any },
+    futureKey: string | number,
+    futureValue: any,
+  ): object {
     if (obj[futureKey] || repeatableKeys.has(futureKey)) {
       delete obj[futureKey];
       repeatableKeys.add(futureKey);
@@ -89,7 +101,7 @@ export const ignoreRepeatable = () => {
  * @returns {Function} A function that accepts an object, a future key, and a future value,
  * and adds the key-value pair to the object.
  */
-export const defaultStrategy = () => {
+export const defaultStrategy = (): Function => {
   /**
    * Default strategy function for flipping keys and values.
    *
@@ -98,7 +110,11 @@ export const defaultStrategy = () => {
    * @param {*} futureValue - The value to set for the futureKey.
    * @returns {Object} The updated object with the key-value pair added.
    */
-  return (obj, futureKey, futureValue) => {
+  return (
+    obj: { [x: string]: any },
+    futureKey: string | number,
+    futureValue: any,
+  ): object => {
     obj[futureKey] = futureValue;
     return obj;
   };

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { flipMergeMap } from '../src/flipMergeMap.js';
+import { flipMergeMap } from '../src/flipMergeMap.ts';
 
 describe('flipMergeMap', () => {
   it('should return a new Map with flipped key-value pairs', () => {

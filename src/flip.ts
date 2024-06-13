@@ -1,5 +1,5 @@
-import { flipAsMap, hasNonPrimitiveValues, isNil } from './utils/utils.js';
-import { defaultStrategy } from './strategies/strategies.js';
+import { flipAsMap, hasNonPrimitiveValues, isNil } from './utils/utils';
+import { defaultStrategy } from './strategies/strategies';
 
 /**
  * Flips the keys and values of an object based on a provided strategy.
@@ -9,7 +9,10 @@ import { defaultStrategy } from './strategies/strategies.js';
  * The strategy function takes three arguments: the accumulator object, a value from the original object, and the key from the original object.
  * @returns {Object} The flipped object.
  */
-export const flip = (original, strategy = defaultStrategy) => {
+export const flip = <T extends string | number | symbol>(
+  original: Record<string, T>,
+  strategy: Function = defaultStrategy,
+): Record<T, string> | typeof original | Map<T, string> => {
   const flipped = {};
   const st = strategy();
 

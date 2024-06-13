@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { flipMerge } from '../src/flipMerge.js';
+import { flipMerge } from '../src/flipMerge.ts';
 
 describe('flipMerge function tests', () => {
   it('should return null/undefined if argument is null or undefined', () => {

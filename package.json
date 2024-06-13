@@ -1,17 +1,17 @@
 {
   "name": "flip-object",
-  "version": "1.0.4",
-  "main": "dist/index.js",
-  "module": "src/index.js",
+  "version": "1.0.5",
+  "main": "dist/index.ts",
+  "module": "dist/index.ts",
   "type": "module",
   "description": "Small library to slip object's or map's properties",
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "tsc",
     "lint": "eslint ./src/**/*.js",
     "test": "mocha tests/**/*.test.js",
     "coverage": "c8 npm test"
   },
-  "typings": "./src/*.d.ts",
+  "typings": "./dist/*.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/StAngerr/flip-object.git"
@@ -47,6 +47,7 @@
     "globals": "^15.4.0",
     "mocha": "^10.4.0",
     "nyc": "^17.0.0",
-    "prettier": "3.3.1"
+    "prettier": "3.3.1",
+    "typescript": "^5.4.5"
   }
 }

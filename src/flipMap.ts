@@ -1,4 +1,4 @@
-import { isNil } from './utils/utils.js';
+import { isNil } from './utils/utils';
 
 /**
  * Flips the keys and values of a Map instance.
@@ -6,7 +6,9 @@ import { isNil } from './utils/utils.js';
  * @param {Map} original - The Map instance to flip.
  * @returns {Map} The flipped Map instance with keys and values swapped.
  */
-export const flipMap = (original) => {
+export const flipMap = <T, U>(
+  original: Map<T, U>,
+): Map<U, T> | typeof original => {
   const flipped = new Map();
 
   if (isNil(original)) return original;

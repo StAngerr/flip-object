@@ -4,7 +4,7 @@ import {
   mergeValues,
   ignoreRepeatable,
   defaultStrategy,
-} from '../../src/strategies/strategies.js';
+} from '../../src/strategies/strategies.ts';
 
 describe('increment', () => {
   it('should add new key if it does not exist', () => {
